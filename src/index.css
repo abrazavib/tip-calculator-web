@@ -1,0 +1,208 @@
+/*** Logo View ***/
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* alignment = .center */
+  justify-content: center;
+  gap: 8px; /* spacing = 8 */
+}
+
+/* Imagen con aspect-fit y relación 1:1 */
+.logo-image {
+  width: 48px; /* ajustable */
+  height: 48px; /* aspecto cuadrado */
+  object-fit: contain; /* scaleAspectFit */
+}
+
+/* Contenedor vertical equivalente al vStackView */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: -4px; /* replicar spacing = -4 */
+}
+
+/* TOP LABEL */
+.logo-top-text {
+  font-size: 16px;
+  font-weight: 600; /* demibold */
+  margin: 0;
+}
+
+/* Parte de TIP en bold y más grande */
+.logo-top-bold {
+  font-size: 24px;
+  font-weight: 700; /* bold */
+}
+
+/* BOTTOM LABEL */
+.logo-bottom-text {
+  font-size: 20px;
+  font-weight: 600; /* demibold */
+  margin: 0;
+}
+
+/*** Result View ***/
+
+.result-container {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+
+  /* Sombra equivalente al addShadow() */
+  box-shadow: 0px 3px 12px rgba(0, 0, 255, 0.1);
+}
+
+.result-vstack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Swift usa spacing = 8 */
+}
+
+.result-header {
+  font-size: 18px;
+  font-weight: 600; /* demibold */
+  margin: 0;
+}
+
+.result-amount-per-person {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.result-amount-per-person .small {
+  font-size: 24px; /* rango (0,1) con fuente más pequeña */
+  font-weight: 700;
+}
+
+.result-line {
+  width: 100%;
+  height: 2px;
+  background-color: #d6d6d6; /* ThemeColor.separator aproximado */
+}
+
+.result-spacer {
+  height: 0px; /* buildSpacerView(0) */
+}
+
+.result-hstack {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/*** Amount View ***/
+
+.amount-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.amount-container.left {
+  text-align: left;
+}
+
+.amount-container.right {
+  text-align: right;
+}
+
+.amount-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.amount-value {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/*** Bill Input View ***/
+
+.bill-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+/* Equivalente al espacio entre headerView y textFieldContainer */
+.bill-header-wrapper {
+  width: 68px;
+  height: 24px;
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* Contenedor del textField (equivalente a cornerRadius 12) */
+.bill-input-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 0 16px;
+  height: 48px;
+  flex-grow: 1;
+}
+
+/* Moneda con hugging alto */
+.bill-currency {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 8px;
+  white-space: nowrap; /* evita estirarse */
+}
+
+/* UITextField equivalencia */
+.bill-textfield {
+  flex-grow: 1;
+  font-size: 28px;
+  font-weight: 600; /* semibold */
+  border: none;
+  outline: none;
+  color: #333; /* ThemeColor.text aproximado */
+}
+
+/* Botón Done simulado para Web */
+.bill-done-button {
+  margin-left: 12px;
+  background: #e0e0e0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/*** Header View ***/
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* equivalente a .leading en UIStackView */
+  gap: -8px; /* Swift usa spacing -8 */
+}
+
+/* Simula los spacer views: ambos tendrán la misma altura */
+.spacer {
+  height: 16px; /* ajustable; solo debe ser igual arriba y abajo */
+}
+
+/* Estilos equivalentes a los ThemeFont del ejemplo */
+.top-label {
+  font-size: 18px;
+  font-weight: 700; /* bold */
+  margin: 0;
+}
+
+.bottom-label {
+  font-size: 16px;
+  font-weight: 400; /* regular */
+  margin: 0;
+}
