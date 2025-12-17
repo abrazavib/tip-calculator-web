@@ -1,0 +1,81 @@
+/*** Tip Input View ***/
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.buttonsVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.buttonsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.tipButton {
+  flex: 1;
+  padding: 14px 0;
+  background-color: #3b82f6; /* ThemeColor.primary */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.customButton {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #10b981 !important; /* ThemeColor.secondary */
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalCard {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 16px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
